@@ -49,7 +49,7 @@ Local Repository
 ## B. R U Ready?
     - windows key + R
     - type "CMD"  and run CMD Window
-    - type "git clone https://github.com/joyer7/titanic.git" on command window
+    - type "git clone https://github.com/joyer7/repository.git" on command window
     - Enjoy It !!!
     
 
