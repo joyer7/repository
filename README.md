@@ -37,6 +37,7 @@ Local Repository
 	- make-download-copy-script.py : Make download script
 
 **3. ./sh-script/**
+
     - ./compress/
 	- ./delete/
 	- ./py-script/verify-current-repo.py
