@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo "--------------------------------------------"
+echo "● Repository Manager           "
+echo "● Editor                                    "
+echo "  - Shin Seok Rho           "
+echo "  - joyer@kolon.com, injoyer@yonsei.ac.kr   "
+echo "--------------------------------------------"
+
+
 echo "========================================================="
 echo "= 1 Get Meta                                            ="
 echo "=  - cran : httsp://cran.r-project.com/src/contrib      ="                       

@@ -92,7 +92,7 @@ class MakeDownCopyScript(object):
                         dportal_cp_script += 'mkdir -p {}\n'.format(self.REPO_DIR)
 
                     print("[BAD] %s doesn't exists"%(stage_repo_dir))
-                    download_script += 'wget --connect-timeout=2 --tries=3 -N {} -P {}/\n'.\
+                    download_script += 'wget --no-check-certificate  --connect-timeout=2 --limit-rate=10M -c -N --tries=3  {} -P {}/\n'.\
                         format(url, self.STAGE_REPO_DIR)
                     copy_script += 'cp {} {}\n'.format(stage_repo_dir, repo_dir)
                     copy_script += 'cp {} {}/\n'.format(stage_repo_dir, new_repo_dir)
@@ -147,7 +147,7 @@ class MakeDownCopyScript(object):
 #                            summary['package_info'].append('{}, {}'.format(package, real_size))
                     else:
                         print('[BAD] %s as The size of %s seems not ok (%d/%d)'%(package,package,real_size,package_size))
-                        download_script += 'wget --connect-timeout=2 --tries=3 -N {} -P {}/\n'.format(url, self.STAGE_REPO_DIR)
+                        download_script += 'wget --no-check-certificate  --connect-timeout=2 --limit-rate=10M -c -N --tries=3  {} -P {}/\n'.format(url, self.STAGE_REPO_DIR)
                         copy_script += 'cp {} {}\n'.format(stage_repo_dir, repo_dir)
                         copy_script += 'cp {} {}/\n'.format(stage_repo_dir, new_repo_dir)
                         copy_script += 'echo \"[COPIED] Source: {}\"\n'.format(stage_repo_dir)
@@ -160,7 +160,7 @@ class MakeDownCopyScript(object):
                         summary['package_info'].append('{}, {}'.format(package, real_size))
                 else:
                     print("[BAD] %s as %s doesn't exists"%(package,package))
-                    download_script += 'wget --connect-timeout=2 --tries=3 -N {} -P {}/\n'.format(url, self.STAGE_REPO_DIR)
+                    download_script += 'wget --no-check-certificate  --connect-timeout=2 --limit-rate=10M -c -N --tries=3  {} -P {}/\n'.format(url, self.STAGE_REPO_DIR)
                     copy_script += 'cp {} {}\n'.format(stage_repo_dir, repo_dir)
                     copy_script += 'cp {} {}/\n'.format(stage_repo_dir, new_repo_dir)
                     copy_script += 'echo \"[COPIED] Source: {}\"\n'.format(stage_repo_dir)
